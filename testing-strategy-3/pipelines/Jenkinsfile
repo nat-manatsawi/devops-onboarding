@@ -6,8 +6,8 @@ pipeline {
     environment {
         PROJECT_PATH="${env.JENKINS_HOME}/workspace/OnBoardingPart3/testing-strategy-3"
         SCRIPTS_PATH="${PROJECT_PATH}/scripts"
-        E2E_PATH="${PROJECT_PATH}/e2e-web"
-        WEB_PATH="${PROJECT_PATH}/web"
+        E2E_PATH="${env.PWD}/devops-onboarding/testing-strategy-3/e2e-web"
+        WEB_PATH="${env.PWD}/devops-onboarding/testing-strategy-3/web"
         DEV="dev"
         ALPHA="alpha"
         PREPROD="preprod"
