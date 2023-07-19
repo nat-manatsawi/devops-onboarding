@@ -6,6 +6,8 @@ pipeline {
     environment {
         PROJECT_PATH="${env.JENKINS_HOME}/workspace/OnBoardingPart3/testing-strategy-3"
         SCRIPTS_PATH="${PROJECT_PATH}/scripts"
+        E2E_PATH="/Users/manatsawisutlaeo/Desktop/Repositories/palo-it-training/devops-onboarding/testing-strategy-3/e2e-web"
+        WEB_PATH="/Users/manatsawisutlaeo/Desktop/Repositories/palo-it-training/devops-onboarding/testing-strategy-3/web"
         DEV="dev"
         ALPHA="alpha"
         PREPROD="preprod"
@@ -15,19 +17,17 @@ pipeline {
     stages {
         stage('Build') {
            steps {
-                dir("${PROJECT_PATH}/web") {
+                dir("${WEB_PATH}") {
                     sh "echo building..."
                     sh "npm i"
                     sh "npm run start &"
                 }
             }
         }
-        
         stage('Test environment DEV') {
             steps {
-                dir("${PROJECT_PATH}/e2e-web") {
+                dir("${E2E_PATH}") {
                    sh "echo testing..."
-                   sh "npm i"
                    sh "npm run test"
                 }
             }
