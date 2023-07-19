@@ -16,9 +16,7 @@ pipeline {
         stage('Build') {
            steps {
                 dir("${SCRIPTS_PATH}") {
-                    sh """
-                    echo "Build"
-                    """
+                    sh ./install.sh
                 }
             }
         }
