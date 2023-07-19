@@ -28,6 +28,7 @@ pipeline {
             steps {
                 dir("${E2E_PATH}") {
                    sh "echo testing..."
+                   sh "npm i"
                    sh "npm run test"
                 }
             }
