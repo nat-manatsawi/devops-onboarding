@@ -29,7 +29,7 @@ pipeline {
                 dir("${SCRIPTS_PATH}") {
                    sh "echo testing..."
                    sh "cd ${WEB_PATH} && npm run start &"
-                   sh "cd ${E2E_PATH} && $(npm bin)/cypress-tags run -e TAGS='not @skip and not @draft'"
+                   sh "cd ${E2E_PATH} && npm test"
                 }
             }
         }
