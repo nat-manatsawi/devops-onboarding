@@ -29,7 +29,7 @@ pipeline {
                 dir("${SCRIPTS_PATH}") {
                    sh "echo testing..."
                    sh "cd ${WEB_PATH} && npm run start &"
-                   sh "cd ${E2E_PATH} && npm run test"
+                   sh "cd ${E2E_PATH} && npm test"
                 }
             }
         }
