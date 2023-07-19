@@ -19,8 +19,8 @@ pipeline {
            steps {
                 dir("${SCRIPTS_PATH}") {
                     sh "echo building..."
-                    sh "./install.sh"
                 }
+                sh "echo $(pwd)"
             }
         }
         stage('Test environment DEV') {
