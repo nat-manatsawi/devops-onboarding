@@ -27,7 +27,7 @@ pipeline {
                 dir("${PROJECT_PATH}/e2e-web") {
                    sh "echo testing..."
                    sh "npm i"
-                //    sh "npm run test"
+                   sh "npm run test"
                 }
             }
         }
