@@ -6,7 +6,7 @@ pipeline {
     environment {
         PROJECT_PATH="${env.JENKINS_HOME}/workspace/OnBoardingPart3/testing-strategy-3"
         SCRIPTS_PATH="${PROJECT_PATH}/scripts"
-        PATH=$(pwd)
+        // PATH=$(pwd)
         // E2E_PATH="${PATH/scripts/""}/e2e-web"
         // WEB_PATH="${PATH/scripts/""}web"
         DEV="dev"
